@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--1.Biến (variable) là một tên gọi được gắn cho một vùng nhớ chứa dữ liệu-->
+<!--2. Dữ liệu được lưu trữ trong vùng nhớ cửa biến được gọi là giá trị-->
+<!--3. Có thể truy nhập, gán hay thay đổi giá trị của biến-->
+<!--4. Khi gán một giá trị mới thì giá trị cũ sẽ bị ghi đè lên-->
+<!--5. Cần phải khai báo biến trước khi sử dụng-->
+<!--Đặt tên cho biến-->
+<!--+ Tên biến phải bắt đầu bằng một ký tự alphabet (a b c...)-->
+<!--+ theo sau ký tự đầu có thể là các ký tự chữ số-->
+<!--+ nên tránh đặt tên biến trùng tên các key word-->
+<!--+ Tên biến được mô tả ý nghĩa cửa nó-->
+<!--+ Tránh dùng các ký tự gây nhầm lẫn-->
+<!--+ Tên biến có phân biệt chữ Hoa và Chữ thường-->
+<!--+ Nên áp dụng quy tắc đặt tên biến chuẩn khi lập trình-->
+<!--II. Giá trị của biến-->
+<!--+ hằng là một tên gọi đại diện cho một giá cố định-->
+<!--+ Giá trị của hằng cần phải được gán tại thời điểm khai báo-->
+<!--1. Khai báo hằng-->
+<!--cú pháp khai báo hằng const = CONSTANTNAME là tên của hằng-->
+<!--value là gí trị của hằng-->
+<!--<script>-->
+<!--    var x,y;-->
+<!--    x= 83;-->
+<!--    y =9-->
+<!--    console.log(2+5+"8");-->
+<h1>Kiểu dữ liệu trong javascript</h1>
+<!--<textarea name="" id="" cols="30" rows="10">-->
+<!--&lt;!&ndash;    Tất cả các ngôn ngữ lập trinhg đều có cấu trúc dữ liệu dựng sẵn, nhưng mỗi ngôn ngữ thường có những kiểu cấu trúc dữ &ndash;&gt;-->
+<!--&lt;!&ndash;    liệu khác nhau. Bài viết này sẽ cố gắng liệt kê dữ liệu dựng sẵn trong js và những thuỗ tính của chúng ta; chúng có&ndash;&gt;-->
+<!--&lt;!&ndash;    thể được dùng để xây dựng những kiểu cấu trúc dữ liệu khác nhau. Khi có thể, rút so sánh với những ngôn ngữ khác&ndash;&gt;-->
+<!--</textarea>-->
+    <h3>Kiểu động</h3>
+<!--Js là một ngôn ngữ định kiểu yếu hay động. Điều đó nghĩa là không cần phải khai báo kiểu của các biến trước khi dùng. Kiểu -->
+<!--sẽ được xác định tự động trong khi chương trình được thực thi. Điều đó cũng có nghĩa là một biến có thể chứa giá trị của các -->
+<!--kiểu dữ liệu khác nhau:-->
+<!--<script>-->
+<!--    let foo = 42; // foo là một số-->
+<!--    foo = "bar"; // bây giờ foo là một chuỗi ký tự-->
+<!--    foo = true; // bây giờ foo là một luận lý-->
+<!--</script>-->
+<h2>Kiểu dữ liệu</h2>
+tiêu chuẩn ecmascript mới nhất xác định bảy kiểu dữ liệu:
+<!--+ Sáu kiểu nguyên thủy:-->
+<!-- - kiểu boolean-->
+<!-- - kiểu của null-->
+<!-- - kiểu  của undefined-->
+<!-- -Kiểu số-->
+<!-- -kiểu chuỗi-->
+<!-- -kiểu symbol (mới trong ecmascript 6)-->
+<!--+ và kiểu tương đối-->
+<h2>Giá trị sơ khai</h2>
+<!--tất cả các kiểu trừ đối tượng đều được xác định giá trị bất biến(giá trị, không có khả năng thay đổi)-->
+<!--ví dụ và không giống C, một chuỗi là bất biến. Ta gọi chúng là giá trị sơ khai-->
+<!--Kiểu boolean là đại diện có hai giá trị logic true và false.-->
+<!--kiểu null có giá trị duy nhất là null-->
+<!--kiểu underfined được chứa gán giá trị có giá trị là undefined-->
+<!--Kiểu số theo tiêu chuẩn ecmascript, chỉ có duy nhất một kiểu số: the double - precision-->
+<!--64 bit binary format ieee 754 có giá trị từ -(2^53-1) đến 2^53-1, không có kiểu số nguyên. Ngoài việc có thể chứa giá trị-->
+<!--dấu phẩy động, kiểu số có ba giá trị biểu tượng: +infinity, -infinity, and nan (not-a-number)-->
+<!--Để kiểm tra lớn hơn hay nhỏ hơn +/- infinity, bạn có thể xem nuber.Max hoặc number.min_value và bắt đầu từ ecmascript 6,-->
+<!--bạn cũng có thể kiểm tra một số có nằm trong khoảng double precision floating - point bằng cạch dung number.issafeinteger()-->
+<!--cũng như number.max_safe_integer và number.Min_safe_integer. Ngoài phạm vi này, một số trong JS không còn an toàn nữa.-->
+<!--Có một số nguyên duy nhất có hai đại diện là 0 được đại diện bơi -0 và +0. ("0" là một bí danh của +0). trong thự tế , điều này-->
+<!--hầu như không có tác động. ví dụ +0===-0 là true. Tuy nhiên có thể nhận thấy điều này khi chia một số cho không:-->
+<!--<script>-->
+<!--    var x =10;-->
+<!--    let y =5;-->
+<!--    // z = y++ + &#45;&#45;x*5; thứ tự ưu tiên của thuật toán tăng sau là sau cùng lên biến y =5 sẽ đc cộng trước-->
+<!--    // g = ++y + &#45;&#45;x*5; toán tử ++y và &#45;&#45;x sẽ được thực hiện trước khi pháp nhân chia cộng trừ thực hiện-->
+<!--    // console.log(g);-->
+<!--// </script>-->
+<!--Mặc dù một số thường chỉ đại diện cho giá trị của nó, JS cung cấp một vài toán tử nhị phân. chúng ta có thể được sử dụng như một-->
+<!--chuỗi boolean bằng cách dùng bit masking. Điều này thường được xem như một cách tệ, tuy nhiêu JS không cung cấp bất kỳ phương tiện napf-->
+<!--khác để trình bày một tập hợp các boolean. Bit masking cũng có xu hướng làm mã khó đọc, hiểu , và duy trì hơn. Nó có thể cần thiết-->
+<!--trong một môi trường rất hạn chế, giống như khi cố gắng để đối phó với hạn chế lưu trữ cục bộ trong trường hợp nặng khi mỗi-->
+<!--chút so với đếm mạng. kỹ thuật này chỉ nên được xem xét khi nó là biện pháp cuối cùng có thể thực hiện để tối ưu hóa kích thước.-->
+<h2>Kiểu chuỗi</h2>
+<!--Kiểu chuỗi được dùng để biểu diễn dữ liệu dạng văn bản. Nó là một dãy " các phần tử" số nguyên 16-bit. Mỗi phần tử có một vị trí trong chuỗi-->
+
+
+</body>
+</html>
